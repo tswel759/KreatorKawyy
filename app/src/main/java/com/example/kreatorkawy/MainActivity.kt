@@ -40,8 +40,23 @@ class MainActivity : AppCompatActivity() {
                 }
                 override fun onStartTrackingTouch(seekBar: SeekBar?) {}
                 override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+            })
+        findViewById<Button>(R.id.orderButton).setOnClickListener {
+            val kawa = findViewById<RadioButton>(
+                findViewById<RadioGroup>(R.id.coffeeTypeGroup).checkedRadioButtonId
+            )?.text ?: "Nieznana kawa"
+
+            val dodatki = when {
+                findViewById<CheckBox>(R.id.checkMleko).isChecked && findViewById<CheckBox>(R.id.checkCukier).isChecked -> "mleko, cukier"
+                findViewById<CheckBox>(R.id.checkMleko).isChecked -> "mleko"
+                findViewById<CheckBox>(R.id.checkCukier).isChecked -> "cukier"
+                else -> "bez dodatków"
             }
-        )
+
+            val ilosc = findViewById<SeekBar>(R.id.quantitySeekBar).progress.coerceAtLeast(1)
+
+            Toast.makeText(this, "Zamówienie: $ilosc x $kawa, $dodatki", Toast.LENGTH_LONG).show()
+        }
 
 
     }
