@@ -9,7 +9,7 @@
     android:orientation="vertical"
     android:padding="16dp"
     android:gravity="center"
-    tools:context=".MainActivity">
+    >
 
 
     <ImageView
@@ -20,5 +20,37 @@
         android:scaleType="centerCrop"
         android:src="@drawable/espresso"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wybierz rodzaj kawy:"
+        android:textSize="18sp"
+        android:paddingTop="10dp" />
+
+    <RadioGroup
+        android:id="@+id/coffeeTypeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radiobutton_Espresso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Espresso"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radiobutton_Latte"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Latte" />
+
+        <RadioButton
+            android:id="@+id/radiobutton_Capuccino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cappuccino" />
+    </RadioGroup>
 
 </LinearLayout>
