@@ -16,15 +16,13 @@
         android:id="@+id/coffeeImage"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:contentDescription="Coffee Image"
-        android:scaleType="centerCrop"
         android:src="@drawable/espresso"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Wybierz rodzaj kawy:"
-        android:textSize="18sp"
+        android:textSize="20dp"
         android:paddingTop="10dp" />
 
     <RadioGroup
@@ -37,8 +35,7 @@
             android:id="@+id/radiobutton_Espresso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Espresso"
-            android:checked="true" />
+            android:text="Espresso" />
 
         <RadioButton
             android:id="@+id/radiobutton_Latte"
@@ -52,5 +49,41 @@
             android:layout_height="wrap_content"
             android:text="Cappuccino" />
     </RadioGroup>
+
+    <CheckBox
+        android:id="@+id/checkMleko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mleko" />
+
+    <CheckBox
+        android:id="@+id/checkCukier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cukier" />
+
+
+    <TextView
+        android:id="@+id/iloscText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ilość: 1"
+        android:textSize="20dp" />
+
+    <SeekBar
+        android:id="@+id/quantitySeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="10"
+        android:progress="1" />
+
+
+    <Button
+        android:id="@+id/orderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Złóż zamówienie"
+        android:padding="15dp"
+        android:layout_marginTop="20dp" />
 
 </LinearLayout>
